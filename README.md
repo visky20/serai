@@ -34,4 +34,4 @@ Required ADMIN/USER Role
 This API is used to place a order for an user along with user creation.
 
 
-data.sql under resource folder creates default admin user with role ADMIN
+**data.sql** under resource folder creates default admin user with role ADMIN
