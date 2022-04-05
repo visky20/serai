@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "45b4829b-ea82-41fe-82f7-3612bbacb7e2",
+		"name": "Serai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RestAPIs",
+			"item": [
+				{
+					"name": "OrderRequest",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"userName\": \"Bhushan\",\r\n        \"active\": 1,\r\n        \"roles\": \"ADMIN\",\r\n        \"pizzaOrders\": [\r\n            {\r\n                \"id\":1,\r\n                \"name\": \"veg pizza\",\r\n                \"quantity\": 1,\r\n                \"price\": 265.1\r\n            },\r\n            {\r\n                \"id\":2,\r\n                \"name\": \"paasnasaer pizza\",\r\n                \"quantity\": 3,\r\n                \"price\": 232.1\r\n            }\r\n        ]\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/placeOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"placeOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllOrders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/findAllOrders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"findAllOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByuser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Bhushan\",\r\n    \"password\":\"vishal\",\r\n    \"active\":1,\r\n    \"roles\":\"ADMIN,USER\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/findByUser?userName=Vishal",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"findByUser"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "Vishal"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Welcome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderByUserName",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getOrder?userName=Sri",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getOrder"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "Sri"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Bhushan\",\r\n    \"password\":\"vishal\",\r\n    \"active\":1,\r\n    \"roles\":\"ADMIN,USER\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/createUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
